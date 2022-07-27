@@ -6,8 +6,10 @@ body {
 }
 /* Navbar */
 .navbar {
-  padding-top: 0;
-  position: static;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding-bottom: 24px;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 1.95px 0px;
@@ -58,12 +60,15 @@ body {
   height: 18px;
   justify-content: center;
   position: absolute;
-  right: 24px;
+  right: 32px;
   text-align: center;
-  top: 24px;
+  top: 18px;
   width: 18px;
 }
 /*  */
+.right-offcanvas-sidebar {
+  padding-right: 24px;
+}
 .dropdown-svg {
   cursor: pointer;
   padding-top: 8px;
@@ -118,10 +123,8 @@ body {
 }
 
 /* Menu Section */
-.menu-section-container {
-  padding-top: 2rem;
-  z-index: -1;
-  position: absolute;
+.menu-div-container {
+  padding-top: 1rem;
 }
 .accordion-item .accordion-header .accordion-button {
   background-color: #fafafa;
@@ -142,7 +145,6 @@ body {
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.3s ease-in-out;
   --bs-accordion-active-color: #212121;
-  --bs-accordion-active-bg: #fafafafa;
   --bs-accordion-btn-active-icon: url(
     data:image/svg + xml,
     %3csvgxmlns="http://www.w3.org/2000/svg"width="16"height="16"viewBox="0 0 16 16"%3e%3cpathfill="none"stroke="rgba%280,0,0,.5%29"stroke-linecap="round"stroke-linejoin="round"stroke-width="2"d="M5 14l6-6-6-6"/%3e%3c/svg%3e
@@ -150,11 +152,14 @@ body {
   --bs-accordion-btn-focus-box-shadow: 0px solid;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
-  --bs-accordion-active-bg: #777;
-  --bs-accordion-active-color: #212121;
+  --bs-accordion-active-bg: rgb(22, 22, 22) !important;
+  --bs-accordion-active-color: #000000;
 }
 .accordion-button {
-  color: #5a5a5a;
+  color: #3b3b3b;
+}
+.accordion-button:hover {
+  color: #000000;
 }
 .accordion-button:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-icon);
@@ -163,6 +168,7 @@ body {
 /*  */
 .accroding-image img {
   padding-right: 24px;
+  width: 50px;
 }
 
 .accordion-body > a {
@@ -171,4 +177,110 @@ body {
 }
 .accordion-body {
   margin-left: 24px;
+}
+
+/* Scroll */
+.scroll {
+  margin-top: 56px;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 320px;
+  height: 99%;
+  position: fixed;
+  pointer-events: auto;
+}
+/* Home banner Container */
+.home-banner-container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 42px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  background-image: url("https://d1rn6kzjmi8824.cloudfront.net/wp-content/uploads/2020/07/20074822/grocery-1-scaled.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  --desktop-min-height: 450px;
+  --laptop-min-height: 380px;
+  --tab-min-height: 300px;
+  --mobile-min-height: 200px;
+  --borderRadius: 6px;
+}
+.cartsy-banner-search-content {
+  padding: 150px;
+}
+
+/* Search Input  */
+.cartsy-product-search-form-input {
+  margin-top: 28px;
+  padding: 16px;
+}
+
+.cartsy-product-search-form {
+  width: 100%;
+}
+.cartsy-product-search-form label {
+  position: relative;
+  display: block;
+}
+.hidden-text {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+.cartsy-product-search-form-icon {
+  position: absolute;
+  top: 14px;
+  border: 0px solid white;
+  left: 0;
+  width: 57px;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+.cartsy-input {
+  border: 0px solid var(--colorTextMain, #212121);
+  border-radius: 6px;
+  color: var(--colorTextMain, #212121);
+  font-size: 16px;
+  min-height: 44px;
+  padding: 0 20px;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cartsy-product-search-form-input {
+  outline: none;
+}
+.cartsy-product-search-form label input[type="search"] {
+  width: 100%;
+  height: 58px;
+  padding-left: 57px;
+}
+
+@media (max-width: 1700px) {
+  .cartsy-banner-search-form {
+    width: 600px;
+  }
+}
+/* product */
+.card-text {
+  font-size: 14px;
+}
+.card-button {
+  color: #777;
+}
+
+.card-button:hover {
+  background-color: #5a5a5a;
+  color: white;
 }
