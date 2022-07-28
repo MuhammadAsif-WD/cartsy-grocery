@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Playfair+Display:ital@1&display=swap");
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(194, 194, 194);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(150, 150, 150);
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -231,10 +250,9 @@ body {
   top: 0;
 }
 .cartsy-product-search-form-icon {
+  border: 0px solid white;
   position: absolute;
   top: 14px;
-  border: 0px solid white;
-  left: 0;
   width: 57px;
   height: 100%;
   display: -ms-flexbox;
@@ -244,8 +262,10 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
+  overflow: hidden;
 }
+
 .cartsy-input {
   border: 0px solid var(--colorTextMain, #212121);
   border-radius: 6px;
@@ -267,11 +287,6 @@ body {
   padding-left: 57px;
 }
 
-@media (max-width: 1700px) {
-  .cartsy-banner-search-form {
-    width: 600px;
-  }
-}
 /* product */
 .card-text {
   font-size: 14px;
@@ -283,4 +298,108 @@ body {
 .card-button:hover {
   background-color: #5a5a5a;
   color: white;
+}
+/*  */
+
+@media only screen and (max-width: 600px) {
+  .responsive-offcanvas-top {
+    display: block;
+  }
+  .responsive-right-side {
+    display: none;
+  }
+  .cartsy-banner-search-content {
+    padding: 0.5rem;
+  }
+  .home-res {
+    margin-top: 36px;
+  }
+  .cartsy-banner-search-title {
+    padding-top: 56px;
+  }
+  .accroding-image-responsive b {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .responsive-offcanvas-top {
+    display: block;
+  }
+  .responsive-right-side {
+    display: none;
+  }
+  .cartsy-banner-search-content {
+    padding: 64px;
+  }
+  .cartsy-banner-search-content {
+    padding: 0.5rem;
+  }
+  .home-res {
+    margin-top: 36px;
+  }
+  .cartsy-banner-search-title {
+    padding-top: 5rem;
+  }
+  .home-container {
+    justify-content: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .responsive-offcanvas-top {
+    display: block;
+  }
+  .responsive-right-side {
+    display: none;
+  }
+  .home-res {
+    margin-top: 36px;
+  }
+  .cartsy-banner-search-content {
+    padding: 2rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .responsive-offcanvas-top {
+    display: block;
+  }
+  .responsive-right-side {
+    display: none;
+  }
+  .home-res {
+    margin-top: 36px;
+  }
+  .card {
+    width: 13rem;
+  }
+  .cartsy-banner-search-content {
+    padding: 6rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .responsive-offcanvas-top {
+    display: none;
+  }
+  .responsive-right-side {
+    display: block;
+  }
+  .home-res {
+    margin-top: 56px;
+    padding-left: 48px;
+  }
+  .card {
+    width: 13rem;
+  }
+  .cartsy-banner-search-content {
+    padding: 9rem;
+  }
 }
