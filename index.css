@@ -317,10 +317,10 @@ body {
   .cartsy-banner-search-title {
     padding-top: 56px;
   }
-  .accroding-image-responsive b {
+
+  .accroding-image-responsive p {
     font-size: 24px;
-    padding-left: 10px;
-    padding-right: 20px;
+    z-index: -1 !important;
   }
 }
 
@@ -333,7 +333,7 @@ body {
     display: none;
   }
   .cartsy-banner-search-content {
-    padding: 64px;
+    padding: 56px;
   }
   .cartsy-banner-search-content {
     padding: 0.5rem;
@@ -346,6 +346,9 @@ body {
   }
   .home-container {
     justify-content: center;
+  }
+  .card {
+    width: 10rem;
   }
 }
 
